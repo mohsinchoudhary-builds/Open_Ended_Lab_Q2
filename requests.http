@@ -1,0 +1,31 @@
+### Register user 3 (expect 201)
+POST http://localhost:3000/api/users/register
+Content-Type: application/json
+
+{
+  "name": "Hamza Malik",
+  "address": "Street 7, Mansehra",
+  "email": "hamza.malik@example.com"
+}
+
+### Duplicate email (expect 409)
+POST http://localhost:3000/api/users/register
+Content-Type: application/json
+
+{
+  "name": "Ali Khan",
+  "address": "House 12, Abbottabad",
+  "email": "ali.khan@example.com"
+}
+
+### Missing field (expect 400)
+POST http://localhost:3000/api/users/register
+Content-Type: application/json
+
+{
+  "name": "No Email",
+  "address": "Somewhere"
+}
+
+### List all users (expect 200)
+GET http://localhost:3000/api/users

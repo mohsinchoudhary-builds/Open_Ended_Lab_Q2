@@ -1,0 +1,23 @@
+{
+  "name": "open_ended_lab_q2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/server.js",
+    "migration:run": "typeorm migration:run -d src/infrastructure/database/data-source.js",
+    "migration:revert": "typeorm migration:revert -d src/infrastructure/database/data-source.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "dotenv": "^18.0.9",
+    "express": "^5.3.0",
+    "pg": "^8.23.1",
+    "reflect-metadata": "^0.2.2",
+    "typeorm": "^1.1.2"
+  }
+}
